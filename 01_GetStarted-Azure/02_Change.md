@@ -75,8 +75,7 @@ The terraform apply command consequently shows then the plan and the resources t
 terraform apply
 ```
 <details>
-  <summary><pre data-role="codeBlock" data-info="tf" class="language-tf tf"><code>terraform apply
-</code></pre></summary>
+  <summary><code>terraform apply</code></summary>
 
 ```tf
 azurerm_resource_group.rg: Refreshing state... [id=/subscriptions/da35404a-2612-4419-baef-45fcdce6045e/resourceGroups/rg-terraform-tutorial]
