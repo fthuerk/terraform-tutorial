@@ -74,8 +74,9 @@ The terraform apply command consequently shows then the plan and the resources t
 
 <details>
   <summary><pre data-role="codeBlock" data-info="tf" class="language-tf tf"><code>terraform apply
-</pre></summary>
+</code></pre></summary>
 
+```tf
 azurerm_resource_group.rg: Refreshing state... [id=/subscriptions/da35404a-2612-4419-baef-45fcdce6045e/resourceGroups/rg-terraform-tutorial]
 azurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/da35404a-2612-4419-baef-45fcdce6045e/resourceGroups/rg-terraform-tutorial/providers/Microsoft.Network/virtualNetworks/vnet-terraform-tutorial]
 
@@ -107,7 +108,7 @@ azurerm_resource_group.rg: Modifying... [id=/subscriptions/da35404a-2612-4419-ba
 azurerm_resource_group.rg: Modifications complete after 1s [id=/subscriptions/da35404a-2612-4419-baef-45fcdce6045e/resourceGroups/rg-terraform-tutorial]
 
 Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
-</code>
+```
 </details>
 
 
