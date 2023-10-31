@@ -5,7 +5,7 @@
 * Azure Account and Credentials
 
 
-```tf Title
+```tf Title title
 # Configure the Azure provider
 terraform {
   required_providers {
