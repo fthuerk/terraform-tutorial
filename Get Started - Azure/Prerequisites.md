@@ -4,8 +4,7 @@
 * Azure CLI
 * Azure Account and Credentials
 
-main.tf 
-```tf title="/src/components/HelloCodeTitle.js"
+```tf main.tf 
 # Configure the Azure provider
 terraform {
   required_providers {
