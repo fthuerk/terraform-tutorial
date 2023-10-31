@@ -47,7 +47,7 @@ Alternatively you can also create a service principal with Client ID and Client 
 
 ```bash
 az ad sp create-for-rbac \
---name sp-tf-tutorial \
+--name sp-terraform-tutorial \
 --role="Contributor" \
 --scopes="subscriptions/<SUBSCRIPTION_ID>"
 ```

@@ -15,6 +15,12 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "myTFResourceGroup"
-  location = "westus2"
+  name     = "rg-terraform-tutorial"
+  location = "westeurope"
+
+  tags = {
+  Environment = "Terraform Getting Started"
+  Team = "DevOps"
+  }
+  
 }
