@@ -72,11 +72,13 @@ resource "azurerm_resource_group" "rg" {
 The terraform apply command consequently shows then the plan and the resources that were changed.
 
 
-<details>
+<!-- <details>
   <summary><pre data-role="codeBlock" data-info="tf" class="language-tf tf"><code>terraform apply
-</code></pre></summary>
+</code></pre></summary> -->
 
 ```tf
+$ terraform apply
+
 azurerm_resource_group.rg: Refreshing state... [id=/subscriptions/da35404a-2612-4419-baef-45fcdce6045e/resourceGroups/rg-terraform-tutorial]
 azurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/da35404a-2612-4419-baef-45fcdce6045e/resourceGroups/rg-terraform-tutorial/providers/Microsoft.Network/virtualNetworks/vnet-terraform-tutorial]
 
@@ -111,4 +113,42 @@ Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
 ```
 </details>
 
+Now we can again show all resources with details.
 
+```tf
+$ terraform show
+# azurerm_resource_group.rg:
+resource "azurerm_resource_group" "rg" {
+    id       = "/subscriptions/da35404a-2612-4419-baef-45fcdce6045e/resourceGroups/rg-terraform-tutorial"
+    location = "westeurope"
+    name     = "rg-terraform-tutorial"
+    tags     = {
+        "Environment" = "Terraform Getting Started"
+        "Team"        = "DevOps"
+    }
+}
+
+# azurerm_virtual_network.vnet:
+resource "azurerm_virtual_network" "vnet" {
+    address_space           = [
+        "10.0.0.0/16",
+    ]
+    dns_servers             = []
+    flow_timeout_in_minutes = 0
+    guid                    = "6d1c69ba-5603-4c7e-9ea6-ebb5c4d8ec37"
+    id                      = "/subscriptions/da35404a-2612-4419-baef-45fcdce6045e/resourceGroups/rg-terraform-tutorial/providers/Microsoft.Network/virtualNetworks/vnet-terraform-tutorial"
+    location                = "westeurope"
+    name                    = "vnet-terraform-tutorial"
+    resource_group_name     = "rg-terraform-tutorial"
+    subnet                  = []
+    tags                    = {}
+}
+```
+
+And for a better overview also the short list.
+
+```tf
+$ terraform state list
+azurerm_resource_group.rg
+azurerm_virtual_network.vnet
+```
