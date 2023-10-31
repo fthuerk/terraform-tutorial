@@ -5,7 +5,7 @@
 * Azure Account and Credentials
 
 
-```tf Title title
+```tf {id="python-print" class="blue large" data-filename="test.py"}
 # Configure the Azure provider
 terraform {
   required_providers {
